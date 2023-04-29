@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="activity-2.css">
+    <style>
+        body ::after{
+            background-image: url("https://e0.pxfuel.com/wallpapers/858/172/desktop-wallpaper-naughty-dog-issues-statement-on-no-last-of-us-part-2-the-last-of-us-part-2.jpg");
+            background-size: cover;
+            background-position: center center;
+            background-attachment: fixed;
+            content: "";
+            opacity: 0.2;
+            position: fixed;
+            z-index: -1;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 1;
+        }
+        .progress-bg {
+            position:absolute;
+            bottom: 0;
+            left: 0;
+            right: 4%;
+            top: 88%;
+            margin: 1;
+            padding: 0;
+            margin: 0 auto;
+            width: 15%;
+            height: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: inset 0 0 10px #ccc;
+        }
+
+        .progress-bar {
+            height: 20px;
+            border-radius: 10px;
+            float: left;
+            width: 12%;
+
+            background: radial-gradient(circle at 10% 20%, rgb(166, 104, 33) 39.5%, rgba(100, 46, 122, 0.23) 100.2%);
+            
+        }
+
+        .progress-bg h3.goal, .progress-bg h3.raised {
+            font-family: Arial,sans-serif;
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 78px;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            display: inline;
+        }
+
+
+        .progress-bg h3.raised {
+            color: #fff;
+            margin: 14px 25px 0 50px;
+            padding: 0 40px 0 0;
+        }
+
+        .progress-bg h3.goal {
+            color: #b2b2b2;
+        text-align: center;
+        }
+
+
+
+        @keyframes fadein {
+            from { opacity: 0; }
+            to   { opacity: 1; }
+        }
+
+        @-webkit-keyframes fadein {
+            from { opacity: 0; }
+            to   { opacity: 1; }
+        }
+        .progress-bg h3.goal {
+            float: right;
+            display: inline;
+            padding: 0 25px 0 0;
+        text-align: center;
+        }
+
+        body .progress-bg div {
+            -webkit-animation: progress-bar 2s ease forwards;
+            -moz-animation: progress-bar 2s ease forwards;
+            -o-animation: progress-bar 2s ease forwards;
+            animation: progress-bar 2s ease forwards;
+        }
+        
+        
+        header {
+        position: absolute;
+        top: 0;
+        left: 1%;
+        
+        }
+
+        img {
+        height: 80px; 
+        
+        }
+
+    </style>
+    <title>Escape the Streets</title>
+</head>
+<body>
+    <header>
+        <img src="Screenshot_(81)-transformed-PhotoRoom (1).png" alt="Your Logo">
+    </header>
+    <audio id="bgmusic" autoplay loop>
+        <source src="My-Dark-Passenger.mp3" type="audio/mp3">
+    </audio>
+
+    
+    <button id="quit-btn" onclick="window.location.href='start-screen.html'">Quit Game</button>
+
+    <button id="mute-btn" onclick="toggleMute()">Mute</button>
+
+    <div id="title"><h1>Escape the Streets: The lost City</h1></div>
+    <div id="instructions">
+        <p>You walk down a dense forest and see the bushes move. What do you do?
+      </p>
+    </div>
+    <div title="Choose Your Path"  id="buttoncontainer"> <button onclick="window.location.href='./Game-Over.html'"> Go deep inside the forest</button>
+    <div id="buttoncontainer"> <button onclick="window.location.href='./thirteenthpage.html'"> Run towards opposite direction </button>     
+
+    <div title="You've covered a lot" class="progress-bg">
+            <div class="progress-bar">
+                <h3 class="raised">Progress </h3>
+            </div>
+                
+                <h3 class="goal"></h3>
+    </div>   
+    
+
+        <!--JAVASCRIPT BELOW-- -->    
+
+    <script>
+        var audio = document.getElementById("bgmusic");
+        function toggleMute() {
+            if(audio.muted) {
+                audio.muted = false;
+                document.getElementById("mute-btn").innerHTML = "Mute";
+            } else {
+                audio.muted = true;
+                document.getElementById("mute-btn").innerHTML = "Unmute";
+            }
+        }
+        var bgmusic = document.getElementById("bgmusic");
+        if (bgmusic.paused) {
+            bgmusic.play();
+        }    
+    </script>    
+</body>
+</html>

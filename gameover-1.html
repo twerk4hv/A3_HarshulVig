@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="activity-2.css">
+    
+	<title>Game Over</title>
+	<style>
+		body {
+			background-color: #222;
+			background-image: url('https://images.nightcafe.studio/jobs/gL77FhH4skfvCzouKMsC/gL77FhH4skfvCzouKMsC--3--IUMEN_2x.jpg?tr=w-1600,c-at_max');
+			background-size: cover;
+            background-position: center center;
+            background-attachment: fixed;
+
+
+            overflow-y: hidden; /* Hide vertical scrollbar */
+            overflow-x: hidden; /* Hide horizontal scrollbar */
+          
+			color: #fff;
+			
+			text-align: center;
+		}
+		.container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			height: 100vh;
+            
+		}
+		h1 {
+			font-size: 6rem;
+			margin-bottom: 50px;
+			animation: fadeInUp 1s ease-in-out;
+			text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+            margin: 0 auto;
+		    margin-top: 2%;
+            
+		
+		    padding: 50px;
+        
+            color: #fe2f00;
+		
+		    border-radius: 20px;
+		    box-shadow: 0 0 10px rgba(254, 77, 77, 0.5);
+		}
+		p {
+            font-family: 'Eater', cursive;
+			font-size: 2rem;
+			margin-bottom: 50px;
+			animation: fadeInUp 1s ease-in-out 0.5s forwards;
+			opacity: 0;
+            margin-bottom: 4%;
+            padding-bottom: 10%;
+            font-weight: bold;
+        
+		}
+		button {
+            font-family: 'Eater', cursive;
+			padding: 20px 40px;
+			
+			border: 3px solid rgb(108, 83, 47);
+
+            margin-top: 8%;
+			
+			font-size: 2rem;
+			cursor: pointer;
+			transition: all 0.2s ease-in-out;
+			animation: fadeInUp 1s ease-in-out 1s forwards;
+			opacity: 0;
+		}
+		button:hover {
+            color: white;
+			background-color: rgb(108, 83, 47);
+			transform: scale(1.05);
+		}
+		@keyframes fadeInUp {
+			0% {
+				transform: translateY(50px);
+				opacity: 0;
+			}
+			100% {
+				transform: translateY(0);
+				opacity: 1;
+			}
+		}
+	</style>
+</head>
+<body>
+    <audio id="bgmusic" autoplay loop>
+        <source src="failure-4-with-gong-69906.mp3" type="audio/mp3">
+    </audio>
+	<div class="container">
+		<h1>GAME OVER</h1>
+		<p>You've reached the dead end! You need to start over the game again.
+        </p>
+		<button id="restartgame" onclick="window.location.href='start-screen.html'">Play Again</button>
+	</div>
+
+        <!--JAVASCRIPT BELOW-- -->    
+
+        <script>
+
+
+            var audio = document.getElementById("bgmusic");
+            function toggleMute() {
+                if(audio.muted) {
+                    audio.muted = false;
+                    document.getElementById("mute-btn").innerHTML = "Mute";
+                } else {
+                    audio.muted = true;
+                    document.getElementById("mute-btn").innerHTML = "Unmute";
+                }
+            }
+            var bgmusic = document.getElementById("bgmusic");
+            if (bgmusic.paused) {
+                bgmusic.play();
+            }    
+        </script>   
+</body>
+</html>

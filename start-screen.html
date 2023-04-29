@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="activity-2.css">
+
+	<title>Escape the Streets: The Lost City</title>
+	<style>
+		body {
+            background-color: #222;
+			background-image: url('https://t4.ftcdn.net/jpg/04/39/19/97/360_F_439199712_kUfHomsskMP8I7jld6Ho7CikwAUkzZYZ.jpg');
+			background-size: cover;
+            background-position: center center;
+            background-attachment: fixed;
+
+
+            overflow-y: hidden; /* Hide vertical scrollbar */
+            overflow-x: hidden; /* Hide horizontal scrollbar */
+			margin: 0;
+			padding: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			height: 100vh;
+			background-color: #333;
+			color: #fff;
+			font-family: sans-serif;
+		}
+
+		h1 {
+            font-family: 'Eater', cursive;
+			font-size: 4.5vw;
+			margin: 0;
+			text-align: center;
+			text-shadow: 3px 3px 0 #000;
+            margin-top: 5vw;
+            margin-bottom: 2vw;
+		}
+
+		button {
+            font-family: 'Eater', cursive;
+			font-size: 2vw;
+			padding: 0.5vw 1.5vw;
+			background-color: solid rgb(108, 83, 47);
+			border: none;
+			border-radius: 2vw;
+			color: #000;
+			cursor: pointer;
+			box-shadow: 3px 3px 0 #000;
+			margin-top: 6vw;
+			margin-bottom: 1vw;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+		}
+
+		button:hover {
+			background-color: rgb(108, 83, 47);
+            transform: scale(1.05);
+            color: #fff;
+        
+		}
+        /* Set a default height for the header */
+        header {
+        height: 250px;
+        position: absolute;
+        top: 0;
+        left: 42%;
+        }
+
+        /* Set the height and width of the logo image */
+        img {
+        height: 100%;
+        width: auto;
+        }
+
+        /* Use media queries to adjust the header height and image size for smaller screens */
+        @media only screen and (max-width: 768px) {
+        header {
+            height: 200px;
+        }
+        img {
+            height: 100%;
+            width: auto;
+        }
+        }
+
+        @media only screen and (max-width: 480px) {
+        header {
+            height: 80px;
+        }
+	}
+
+    </style>
+    <title>Escape the Streets</title>
+</head>
+<body>
+    <header>
+        <img src="./output-onlinepngtools.png" alt="Your Logo">
+    </header>
+	<h1>Escape the Streets: <br>The Lost City</h1>
+	<button id="startit" onclick="window.location.href='Instructions.html'">Start Game</button>
+</body>
+</html>

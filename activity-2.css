@@ -1,0 +1,112 @@
+body {
+    background: url("");
+     font-family: 'Eater', cursive;
+     background-size: cover;
+     margin-left: 150px;
+     margin-right: 150px;
+     background-attachment: fixed;
+     background-repeat: no-repeat;
+     background-position: center center;
+     overflow-y: hidden; 
+     overflow-x: hidden; 
+ }
+ #title{
+     display: flex;
+     justify-content: center;
+ }
+ #titlecutscene{
+    display: flex;
+    justify-content: center;
+    font-size: large;
+}
+  h1{
+     font-size: 30px;
+     color: white;
+     
+  }
+
+ #instructions p{
+     text-align: center;
+     color: white;
+     margin-top: 20%;
+    font-weight: bolder;
+
+ }
+
+ #buttoncontainer{
+  display: flex;
+  justify-content: center;
+
+ }
+ #buttoncontainer button{
+      font-family: 'Eater', cursive;
+     color: white;
+     margin: 10px;
+     padding: 10px 15px;
+     background: none;
+     border: 3px solid rgb(69, 47, 18);
+     cursor: pointer;
+     font-weight: bold;
+ }
+
+ #buttoncontainer button:hover{
+    background: linear-gradient(110.3deg, rgb(103, 67, 34) 8.7%, rgb(124, 86, 53) 47.5%, rgb(120, 70, 31) 89.1%);
+     color: white;
+ }
+ #instructionsstory p{
+    text-align: center;
+    color: white;
+    margin-top: 15%;
+    font-size: 25px;
+    font-weight: bolder;
+
+}
+#marqueehaibhai {
+    color: white;
+}
+#quit-btn {
+    font-weight: 700;
+    font-family: 'Eater', cursive;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 18px;
+    padding: 7px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    color: white;
+    background-color: rgb(181, 23, 23);;
+}
+#marqueehaibhai {
+    color: black;
+    }
+#settings-btn {
+        font-weight: 700;
+        font-family: 'Eater', cursive;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+}
+#mute-btn{
+
+    font-weight: 700;
+    font-family: 'Eater', cursive;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    font-size: 18px;
+    padding: 7px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+}
+

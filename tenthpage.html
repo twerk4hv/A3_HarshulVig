@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="37;url=./eightpage.html" />
+
+    <p>Redirecting you to the next page...</p>
+
+    <link rel="stylesheet" type="text/css" href="activity-2.css">
+    <style>
+        body ::after{
+            background-image: url("https://www.wallpaperflare.com/static/772/225/280/the-last-of-us-concept-art-video-games-artwork-wallpaper.jpg");
+            background-size: cover;
+            background-position: center center;
+            background-attachment: fixed;
+            content: "";
+            opacity: 0.2;
+            position: fixed;
+            z-index: -1;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 1;
+        }
+        header {
+            position: absolute;
+            top: 0;
+            left: 1%;
+        }
+        p {
+            color: wheat;
+            font-weight: bold;
+            margin-bottom: 3%;
+        }
+        img {
+            height: 80px; 
+        }
+        #fornarrator {
+            display: flex;
+            justify-content: center;
+            margin-top: 0.2%;
+            margin-bottom: 0.3%;
+        }
+        #fornarrator #narrateButton {
+            font-family: 'Eater', cursive;
+            color: white;
+            margin: 10px;
+            padding: 1vw 2vw;
+            background: none;
+            border: 3px solid rgb(223, 220, 26);
+            cursor: pointer;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+        #fornarrator #narrateButton:hover {
+            background-color: rgb(69, 47, 18);
+        }
+        #title h1 {
+            font-size: 5em;
+            text-align: center;
+        }
+        @media only screen and (max-width: 820px) {
+            #title h1{
+                font-size: 5em;
+                text-align: center;
+            }
+            #fornarrator{
+                margin-top: 5%;
+            }
+        }
+    </style>
+    <title>Escape the Streets</title>
+</head>
+<body>
+    <header>
+        <img src="Screenshot_(81)-transformed-PhotoRoom (1).png" alt="Your Logo">
+    </header>
+
+
+    <span id="titlecutscene"><h1>Escape the Streets: The lost City</h1></span>
+
+    <div id="instructionsstory">
+        <p>As you look around, you notice a child who is trapped in the room. The child then tells you about the man who kidnapped him, who looked similar to the masked man. You saved the child, but found no valuables. The child gives you a city map. As you continue your journey, you come across a giant gate with a dragon symbol, which you recall the masked man mentioning before. You realise that this is the exit to the treacherous maze, Dragon's Way.</p>
+    </div>
+
+    <div id="fornarrator"><button id="narrateButton">Click me to listen to the story</button></div>
+
+    <script>
+        const button = document.getElementById('narrateButton');
+
+        const text = document.getElementById('instructionsstory');
+
+
+        button.addEventListener('click', () => {
+        
+        const utterance = new SpeechSynthesisUtterance(text.innerText);
+        utterance.rate = 1.2;
+        utterance.voice = speechSynthesis.getVoices()[0];
+        
+
+        speechSynthesis.speak(utterance);
+        });
+      </script>
+
+</body>
+</html>
+

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="30;url=./fourthpage.html" />
+    <p>Redirecting you to the next page...</p>
+    <style>
+        body ::after{
+            background-image: url("https://wallpapercave.com/wp/wp8147388.jpg");
+            background-size: cover;
+            background-position: center center;
+            background-attachment: fixed;
+            content: "";
+            opacity: 0.2;
+            position: fixed;
+            z-index: -1;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 1;
+        }
+        #fornarrator {
+            display: flex;
+            justify-content: center;
+            margin-top: 0.2%;
+            margin-bottom: 0.3%;
+        }
+        #fornarrator #narrateButton {
+            font-family: 'Eater', cursive;
+            color: white;
+            margin: 10px;
+            padding: 1vw 2vw;
+            background: none;
+            border: 3px solid rgb(223, 220, 26);
+            cursor: pointer;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+        #fornarrator #narrateButton:hover {
+            background-color: rgb(69, 47, 18);
+        }
+
+        @media only screen and (max-width: 820px) {
+            #title h1{
+                font-size: 5em;
+                text-align: center;
+            }
+            #fornarrator{
+                margin-top: 5%;
+            }
+        }
+        
+    </style>
+
+    <link rel="stylesheet" type="text/css" href="activity-2.css">
+    <title>Escape the Streets</title>
+</head>
+<body>
+    <audio autoplay="true" loop="true" src="" type="audio/mp3"></audio>
+    <div id="title"><h1>Escape the Streets: The lost City</h1></div>
+    <div id="instructionsstory">
+        <p>As you walk towards the clearing, you notice the trees thinning out and the ground beneath your feet becoming slightly uneven. After reaching the clearing, you continue walking for another hundred meters, taking in the beautiful surroundings. Suddenly, you spot the dumpster in the distance, a rusty metal bin sitting at the edge of the clearing.
+      </p>
+    </div>
+
+    <div id="fornarrator"><button id="narrateButton">Click me to listen to the story</button></div>
+
+    <script>
+        const button = document.getElementById('narrateButton');
+
+        const text = document.getElementById('instructionsstory');
+
+
+        button.addEventListener('click', () => {
+        
+        const utterance = new SpeechSynthesisUtterance(text.innerText);
+        utterance.rate = 1.2;
+        utterance.voice = speechSynthesis.getVoices()[0];
+        
+
+        speechSynthesis.speak(utterance);
+        });
+      </script>
+</body>
+</html>
